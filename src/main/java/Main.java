@@ -1,3 +1,4 @@
+import Services.StatsAggregation;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,7 @@ import javafx.stage.WindowEvent;
 import net.rithms.riot.api.ApiConfig;
 import net.rithms.riot.api.RiotApi;
 import net.rithms.riot.api.RiotApiException;
+import net.rithms.riot.api.endpoints.match.dto.Match;
 import net.rithms.riot.api.endpoints.match.dto.MatchList;
 import net.rithms.riot.api.endpoints.match.dto.MatchReference;
 import net.rithms.riot.api.endpoints.static_data.dto.Champion;
@@ -20,34 +22,41 @@ import net.rithms.riot.api.endpoints.summoner.dto.Summoner;
 import net.rithms.riot.constant.Platform;
 import javafx.*;
 
-import java.awt.*;
-import java.io.File;
 import java.io.IOException;
-import java.util.Random;
+import java.util.Calendar;
 
 public class Main extends Application {
 
 
     public static void main(String[] args) throws RiotApiException {
-//        ApiConfig config = new ApiConfig().setKey("RGAPI-96f449c7-2138-466b-9891-5a52715f5963");
+        StatsAggregation stats = new StatsAggregation();
+        System.out.println("Dmg per gold: " + stats.calculateDmgPerGold(41642, 19411));
+
+//        ApiConfig config = new ApiConfig().setKey("RGAPI-f89967bf-f46a-4514-a91d-198eaddbda62");
 //        RiotApi api = new RiotApi(config);
+//
 //
 //        // First we need to request the summoner because we will need it's account ID
 //        Summoner summoner = api.getSummonerByName(Platform.EUW, "Armour");
 //
 //        // Then we can use the account ID to request the summoner's match list
+//
 //        MatchList matchList = api.getMatchListByAccountId(Platform.EUW, summoner.getAccountId());
 //
+//
 //        System.out.println("Total Games in requested match list: " + matchList.getTotalGames());
+//        Match match = api.getMatch(Platform.EUW, matchList.getMatches().get(0).getGameId());
+//        long duration = match.getGameDuration();
+//        int goldSummoner0 = match.getParticipants().get(0).getStats().getGoldEarned();
+//        int wardsSummoner0 = match.getParticipants().get(0).getStats().getWardsPlaced();
 //
+//        StatsAggregation stats = new StatsAggregation();
+//        System.out.println("Trynd gold" + goldSummoner0);
 //
-//
-//        // We can now iterate over the match list to access the data
-//        if (matchList.getMatches() != null) {
-//            for (MatchReference match : matchList.getMatches()) {
-//                System.out.println(match.getChampion());
-//            }
-//        }
+//        System.out.println("Trynd GPM: " + stats.calculateGoldPerMinute(goldSummoner0,duration));
+//        System.out.println("Trynd WPM: " + stats.calculateWardsPerMinute(wardsSummoner0, duration));
+
+
         Application.launch(args);
     }
 
