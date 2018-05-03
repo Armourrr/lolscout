@@ -61,6 +61,7 @@ public class Main extends Application {
             e.printStackTrace();
             System.exit(0);
         }
+
         Scene scene = new Scene(root);
         primaryStage.setTitle("LoLScout");
         primaryStage.setScene(scene);
@@ -71,7 +72,6 @@ public class Main extends Application {
                 System.exit(0);
             }
         });
-        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 //        primaryStage.setTitle("LoLScout");
