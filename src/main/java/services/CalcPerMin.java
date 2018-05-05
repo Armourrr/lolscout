@@ -1,8 +1,8 @@
-package Services;
+package services;
 
 import java.text.DecimalFormat;
 
-public class StatsAggregation {
+public class CalcPerMin {
     public int calculateGoldPerMinute(int gold, long seconds) {
         return (int) ((double)gold/((double)seconds/60));
     }

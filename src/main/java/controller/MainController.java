@@ -2,11 +2,14 @@ package controller;
 
 import config.FilesConfig;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import net.rithms.riot.constant.Platform;
+
 import java.io.File;
 import java.util.Random;
 
@@ -14,11 +17,21 @@ public class MainController {
     @FXML
     private StackPane paneStack;
     @FXML
+    private TextField txtSoloSumm;
+    @FXML
+    private ChoiceBox<Platform> cbRegion;
+    @FXML
+    private Button btnSearchSolo;
+    @FXML
     private ImageView ivChampBg;
+
+
 
     @FXML
     public void initialize() {
         ivChampBg.setImage(getRandomSplashImg());
+        cbRegion.getItems().setAll(Platform.values());
+        cbRegion.getSelectionModel().select(0);
     }
 
     private Image getRandomSplashImg() {
