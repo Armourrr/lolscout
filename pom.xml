@@ -24,9 +24,9 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>com.github.taycaldwell</groupId>
-            <artifactId>riot-api-java</artifactId>
-            <version>4.0.1</version>
+            <groupId>com.merakianalytics.orianna</groupId>
+            <artifactId>orianna</artifactId>
+            <version>3.0.3</version>
         </dependency>
     </dependencies>
 </project>

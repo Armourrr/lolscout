@@ -14,7 +14,21 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.github.taycaldwell:riot-api-java:4.0.1" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.5" level="project" />
+    <orderEntry type="library" name="Maven: com.merakianalytics.orianna:orianna:3.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: com.merakianalytics.datapipelines:datapipelines:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: es.usc.citius.hipster:hipster-core:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:20.0" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okhttp3:okhttp:3.9.1" level="project" />
+    <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.13.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.4" level="project" />
+    <orderEntry type="library" name="Maven: org.msgpack:jackson-dataformat-msgpack:0.8.14" level="project" />
+    <orderEntry type="library" name="Maven: org.msgpack:msgpack-core:0.8.14" level="project" />
+    <orderEntry type="library" name="Maven: joda-time:joda-time:2.9.9" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.4" level="project" />
+    <orderEntry type="library" name="Maven: org.cache2k:cache2k-core:1.0.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.cache2k:cache2k-api:1.0.2.Final" level="project" />
   </component>
 </module>

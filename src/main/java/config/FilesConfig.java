@@ -1,8 +1,8 @@
 package config;
 
-import net.rithms.riot.api.RiotApi;
-
 public class FilesConfig {
-    public static final String DIR_SPLASH = "E:/Users/Jordz/Documents/LOLSTATIC/img/champion/splash/";
+    public static final String DIR_VIEW = "view/";
+    public static final String DIR_SPLASH = "../LOLSTATIC/img/champion/splash/";
+    public static final String DIR_CHAMP_ICON = "../LOLSTATIC/img/champion/icon";
 
 }
