@@ -1,20 +1,39 @@
 package services.stats;
 
 import com.merakianalytics.orianna.types.common.Season;
+import com.merakianalytics.orianna.types.core.championmastery.ChampionMastery;
 import com.merakianalytics.orianna.types.core.match.Match;
 import com.merakianalytics.orianna.types.core.match.MatchHistory;
 import com.merakianalytics.orianna.types.core.match.ParticipantStats;
 import com.merakianalytics.orianna.types.core.summoner.Summoner;
+import com.merakianalytics.orianna.types.data.match.MatchList;
 import services.ChampionStats;
 import services.PlayerData;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PlayerDataExtractor {
-    public PlayerData getChampionHistoryData(Summoner summoner, int numberOfMatches) {
-        PlayerData playerData = new PlayerData(summoner);
+    public PlayerDataExtractor(){}
 
+    public PlayerData extract(Summoner summoner) {
+        PlayerData playerData = new PlayerData(summoner);
+        playerData.setChampionStatsList(getChampionStats(summoner,20));
+        playerData.setChampionMasteryList(getChampionMastery(summoner));
+        playerData.setRecentMatchList(getMatchList(summoner));
+        return playerData;
+    }
+
+    private MatchList getMatchList(Summoner summoner) {
+        return summoner.matchHistory().fromRecentMatches().get().getCoreData();
+    }
+
+    private List<ChampionMastery> getChampionMastery(Summoner summoner) {
+        return summoner.getChampionMasteries();
+    }
+
+    private Map<Integer, ChampionStats> getChampionStats(Summoner summoner, int numberOfMatches) {
         MatchHistory matchHistory = MatchHistory.forSummoner(summoner).withSeasons(Season.SEASON_8).get();
         Map<Integer, ChampionStats> championStatsMap = new HashMap<>();
 
@@ -47,7 +66,6 @@ public class PlayerDataExtractor {
                 break;
             }
         }
-        playerData.setChampionStatsList(championStatsMap);
-        return playerData;
+        return championStatsMap;
     }
 }

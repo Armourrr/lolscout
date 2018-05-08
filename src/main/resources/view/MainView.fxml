@@ -21,17 +21,17 @@
       </StackPane>
       <AnchorPane layoutX="299.0" layoutY="200.0" prefHeight="451.0" prefWidth="793.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#ffffff34" height="141.0" layoutX="114.0" layoutY="29.0" stroke="WHITE" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="416.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#ffffff34" height="141.0" layoutX="15.0" layoutY="29.0" stroke="WHITE" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" width="703.0">
                <effect>
                   <DropShadow />
                </effect>
             </Rectangle>
-            <TextField fx:id="txtSoloSumm" layoutX="268.0" layoutY="45.0" prefHeight="25.0" prefWidth="236.0">
+            <TextField fx:id="txtSoloSumm" layoutX="187.0" layoutY="45.0" prefHeight="25.0" prefWidth="460.0">
                <effect>
                   <DropShadow />
                </effect>
             </TextField>
-            <Label layoutX="132.0" layoutY="51.0" text="SUMMONER NAME: " textFill="WHITE">
+            <Label layoutX="34.0" layoutY="51.0" text="SUMMONER NAME(s): " textFill="WHITE">
                <font>
                   <Font name="Cooper Black" size="12.0" />
                </font>
@@ -39,17 +39,17 @@
                   <DropShadow />
                </effect>
             </Label>
-            <ChoiceBox fx:id="cbRegion" layoutX="354.0" layoutY="82.0" prefWidth="150.0">
+            <ChoiceBox fx:id="cbRegion" layoutX="497.0" layoutY="83.0" prefWidth="150.0">
                <effect>
                   <DropShadow />
                </effect>
             </ChoiceBox>
-            <Button fx:id="btnSearchSolo" layoutX="397.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleSearchSoloBtn" prefHeight="25.0" prefWidth="107.0" text="Search">
+            <Button fx:id="btnSearchSolo" layoutX="540.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleSearchSoloBtn" prefHeight="25.0" prefWidth="107.0" text="Search">
                <effect>
                   <DropShadow />
                </effect>
             </Button>
-            <Label layoutX="287.0" layoutY="88.0" text="REGION:" textFill="WHITE">
+            <Label layoutX="430.0" layoutY="89.0" text="REGION:" textFill="WHITE">
                <font>
                   <Font name="Cooper Black" size="12.0" />
                </font>

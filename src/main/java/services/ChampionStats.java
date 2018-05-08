@@ -1,5 +1,7 @@
 package services;
 
+import com.merakianalytics.orianna.types.core.staticdata.Champion;
+
 public class ChampionStats {
     private int championId;
     private int gamesPlayed;
@@ -119,5 +121,17 @@ public class ChampionStats {
 
     public int getMinionsKilled() {
         return minionsKilled;
+    }
+
+    @Override
+    public String toString() {
+        String champ = Champion.withId(getChampionId()).get().getName();
+        return champ
+                + " Kills: " + getKills()
+                + " Deaths: " + getDeaths()
+                + " Assists: " + getAssists()
+                + " Wins: " + getWins()
+                + " Losses: " + getLosses()
+                ;
     }
 }

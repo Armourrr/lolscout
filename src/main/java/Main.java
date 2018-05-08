@@ -32,7 +32,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource(FilesConfig.DIR_VIEW + "MainView.fxml"));
+            root = FXMLLoader.load(getClass().getResource("view/MainView.fxml"));
         } catch (IOException | NullPointerException e) {
             System.out.println("Failed to load FXML file, exiting...");
             e.printStackTrace();
